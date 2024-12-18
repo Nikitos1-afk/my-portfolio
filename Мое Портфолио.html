@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            background: url('https://avatars.mds.yandex.net/i?id=a428b99925ed0adcfbd9a9597a3591f94d83b6f0-8238876-images-thumbs&n=13') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden; /* Убираем горизонтальный скролл */
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            color: #ffd700;
+            margin-top: 25vh;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .portfolio-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 4.5em;
+            color: #800000;
+            text-transform: uppercase;
+            margin: 0.5em 0;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-title:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-container {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .portfolio-wrapper:hover .btn-container {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 1em;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            color: white;
+            background: #6c5ce7;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background: #5a4dbf;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .container {
+            display: none;
+            padding: 2em;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 2em auto;
+            max-width: 800px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #projects h2, #contacts h2, #reviews h2 {
+            font-family: 'Raleway', sans-serif;
+            color: #2d3436;
+        }
+
+        #projects p, #contacts p, #reviews p {
+            color: #333;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-list li {
+            margin: 0.5em 0;
+            font-size: 1.2em;
+        }
+
+        .project-link {
+            color: #6c5ce7;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Эффект снегопада */
+        .snowflake {
+            position: fixed;
+            top: -10%;
+            z-index: 1000;
+            font-size: 1em;
+            color: #fff;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Главный блок -->
+    <div class="portfolio-wrapper">
+        <h1>Добро пожаловать!</h1>
+        <div class="portfolio-title" onclick="scrollToSection('projects')">Portfolio</div>
+        <div class="btn-container">
+            <button class="btn" onclick="toggleSection('contacts')">Контакты</button>
+            <button class="btn" onclick="toggleSection('projects')">Проекты</button>
+            <button class="btn" onclick="toggleSection('reviews')">Отзывы</button>
+        </div>
+    </div>
+
+    <!-- Раздел "Проекты" -->
+    <div id="projects" class="container">
+        <h2>Мои проекты</h2>
+        <ul class="project-list">
+            <li>1. <a class="project-link" href="C:\Users\6\Desktop\сигареты 90х\Сигареты 90х.html" target="_blank">Магазин</a></li>
+            <li>2. <a class="project-link" href="file:///C:/Users/6/Desktop/Сайт%20Портофолио/сайт%20природы.html" target="_blank">Сайт фотографа природы</a></li>
+            <li>3. <a class="project-link" href="file:///C:/Users/6/Desktop/Задание%2015.1124/8.html" target="_blank">Анкета</a></li>
+            <li>4. <a class="project-link" href="file:///C:/Users/6/Desktop/Сайт%20Цитат/Цитаты%20обнова.html" target="_blank">Цитаты известных личностей</a></li>
+            <li>5. <a class="project-link" href="file:///C:/Users/6/Desktop/Сайт%20Цитат/Квиз%20Тест.html" target="_blank">Тест</a></li>
+            <li>6. <a class="project-link" href="file:///C:/Users/6/Desktop/Змейка/Змейка%20обнова.html" target="_blank">Игра змейка</a></li>
+            <li>7. <a class="project-link" href="C:\Users\6\Desktop\Сайт Колледжа\Колледж 2.html" target="_blank">Колледж</a></li>
+            <li>8. <a class="project-link" href="C:\Users\6\Desktop\Сайт Колледжа\Bank.html" target="_blank">BCC Bank</a></li>
+        </ul>
+    </div>
+
+    <!-- Раздел "Контакты" -->
+    <div id="contacts" class="container">
+        <h2>Мои контакты</h2>
+        <p>Телефон: +7 (123) 456-7890</p>
+        <p>Email: example@email.com</p>
+    </div>
+
+    <!-- Раздел "Отзывы" -->
+    <div id="reviews" class="container">
+        <h2>Отзывы</h2>
+        <p>Здесь вы можете оставить свои отзывы о моих проектах. Напишите, что вам понравилось или что можно улучшить!</p>
+        <p>Если у вас есть отзывы, вы можете загрузить их <a href="C:\Users\6\Desktop\Работы Портфолио\анкета.html" target="_blank">здесь</a>.</p>
+    </div>
+
+    <!-- Эффект снегопада -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const snowContainer = document.createElement('div');
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = '❄';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+                snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+                snowContainer.appendChild(snowflake);
+            }
+            document.body.appendChild(snowContainer);
+        });
+    </script>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                if (section.style.display === "block") {
+                    section.style.display = "none";
+                } else {
+                    section.style.display = "block";
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    </script>
+</body>
+</html>
